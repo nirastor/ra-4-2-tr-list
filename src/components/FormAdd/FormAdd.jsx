@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
 function FormAdd({ onSubmit }) {
-  // Упросить копипасту
+  // Можно ли тут упростить и сделать один обрабочик ввода для нескольких полей?
+  // Если их будет становитсья больше
   const [date, setDate] = useState('');
   const handleDateInput = (e) => {
     setDate(() => e.target.value);

@@ -12,11 +12,6 @@ export default function App() {
   ];
   const [notes, setNotes] = useState(initialNotes);
 
-  const formActions = {
-    add: 'add',
-    edit: 'edit',
-  };
-
   const handleAddNote = (newNote) => {
     const indexOfDate = notes.findIndex((item) => item.date === newNote.date);
     if (indexOfDate === -1) {
@@ -37,7 +32,7 @@ export default function App() {
   return (
     <div className="app">
       <Header />
-      <FormAdd formAction={formActions.edit} onSubmit={handleAddNote} />
+      <FormAdd onSubmit={handleAddNote} />
       <List notes={notes} onDeleteNote={handleDeleteNote} />
     </div>
   );
